@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ 
+
+body > div {
+    background-color: #FAEBD7;  
+    display: grid; 
+				
+    grid-template: 4rem auto 45px / 16rem auto 1fr 1fr;
+    
+    gap: 30px;
+    height: 100%;
+
+}
+
+
+
+header {
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+    background-color: #6495ed;
+    color: #FAEBD7;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+main {
+    grid-row: 1 / 4;
+    grid-column: 2 / 5;
+
+    background-color: #faebd7;
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+    padding: 50px;
+}
+
+.post-date {
+    text-align: left;
+    padding: 10px 30px 0px;
+}
+.post-content {
+    text-align: left; 
+    padding: 0px 30px 10px;
+}
+
+img {
+    margin: auto;
+    display: block;
+}
+
+nav {
+color: #faebd7;
+text-decoration: none;
+}
+
+nav li {
+    list-style: none;
+    color: #FAEBD7;
+    padding-bottom: 10px;
+}
+
+nav a:active {
+color: #DEB887;
+text-decoration: none;
+}
+
+nav a:hover {
+color: white;
+text-decoration: underline;
+}
+
+article {
+    background-color: white;
+    margin: 50px;
+}
+
+article a {
+    color: black;
+}
+
+article a:active {
+    color: #DEB887;
+}
+
+a {
+    color: #faebd7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'lora';
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body > div {
+        padding: 1rem 2%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1.5rem;
+        justify-items: center;
+    }
+
+    header {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+        height: fit-content;
+        background-size: 100%;
+    }
+
+    
+
+    main {
+        grid-column: 1;
+        grid-row: 2;
+        padding: auto;
+    }
+}
