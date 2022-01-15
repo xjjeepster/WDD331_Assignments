@@ -1,0 +1,14 @@
+span.help {
+    color: blue;
+}
+
+.help::before {
+    content: '(';
+}
+.help::after {
+    content: ')';
+}
+
+fieldset > p:nth-child(n+2) {
+    display: none;
+}
