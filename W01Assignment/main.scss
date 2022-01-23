@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+//colors
+$body-background-color: #FAEBD7;
+$header-background-color: #6495ed;
+$white_color: white;
+$black_color: black;
+$nav_color: #DEB887;
+
+//Breakpoints
+$break-small: 20em;
+$break-large: 60em;
+
+//mixins
+@mixin breakpoint($break) {
+    @if $break == large {
+    @media (max-width: $break-large) { @content; }
+    }
+    @else if $break == small {
+    @media (max-width: $break-small) { @content; }
+    } @else {
+    @media ($break) { @content; }
+    }
+} 
+
+@mixin flex-container($axis, $wrap: nowrap) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: $axis $wrap;
+    -ms-flex-flow: $axis $wrap;
+    flex-flow: $axis $wrap;
+}
+
+@mixin center($mw, $w: 90%) {
+    width: $w;
+    max-width: $mw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    @include breakpoint(small) {
+        @include flex-container(column, nowrap)
+    }
+    > div {
+        background-color: $body-background-color;  
+        display: grid; 
+                    
+        grid-template: 4rem auto 45px / 16rem auto 1fr 1fr;
+        
+        gap: 30px;
+        height: 100%;
+    }
+    main, article {
+        @include center(900px)
+    }
+}
+
+header {
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+    background-color: $header-background-color;
+    color: $body-background-color;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 20px;
+    h1 {
+        a {text-decoration: none;
+            color: $body-background-color;}
+    }
+
+    nav {
+        color: $body-background-color;
+        li {
+            list-style: none;
+            color: $body-background-color;
+            padding-bottom: 10px;
+            a {
+                text-decoration: none;
+                color: $body-background-color;
+            }
+            a:active {
+                color: $nav_color;
+                text-decoration: none;
+            }
+            a:hover {
+                color: $white_color;
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+}
+
+main {
+    grid-row: 1 / 4;
+    grid-column: 2 / 5;
+
+    background-color: $body-background-color;
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+    padding: 50px;
+}
+
+img {
+    margin: auto;
+    display: block;
+}
+
+article {
+
+    background-color: $white_color;
+    margin: 50px;
+    .post-date {
+        text-align: left;
+        padding: 10px 30px 0px;
+    }
+    .post-content {
+        text-align: left; 
+        padding: 0px 30px 10px;
+    }
+    a {
+        color: $black_color;
+    }
+    a:active {
+        color: $nav_color;
+    }
+    p {
+        a {
+            color: $header-background-color;
+            text-decoration: none;
+        }
+        a:active {
+            color: $nav_color;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+    }
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'lora';
+    text-decoration: none;
+}
+
+
+/*@media only screen and (max-width: 768px) {
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body > div {
+        padding: 1rem 2%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1.5rem;
+        justify-items: center;
+    }
+
+    header {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+        height: fit-content;
+        background-size: 100%;
+    }
+
+    
+
+    main {
+        grid-column: 1;
+        grid-row: 2;
+        padding: auto;
+    }
+}*/
