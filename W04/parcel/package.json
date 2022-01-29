@@ -11,5 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.2.1"
-  }
+  },
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "prebuild": "npx rimraf build",
+    "build": "parcel build --public-url ./ ./src/index.html  --out-dir build"
+}
 }
