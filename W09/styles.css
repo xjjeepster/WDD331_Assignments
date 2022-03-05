@@ -1039,27 +1039,39 @@ html a,
 body a {
   text-decoration: none;
 }
-
-header {
+html header,
+body header {
   margin: 0;
   background-color: #056cb6;
 }
-
-.page-wrapper {
-  margin: 0 auto;
-}
-
-.site-banner {
+html header .site-banner,
+body header .site-banner {
   display: flex;
   justify-content: space-between;
   height: 60px;
   line-height: 20px;
   margin: 0;
 }
-.site-banner .site-banner a {
+html header .site-banner .mobile-header-icon,
+body header .site-banner .mobile-header-icon {
+  color: #fff;
+  text-decoration: none;
+  justify-content: space-between;
+  line-height: 60px;
+}
+html header .site-banner .site-banner a,
+body header .site-banner .site-banner a {
   text-decoration: none;
 }
-.site-banner .site-banner__left {
+html header .site-banner .icon-byui-logo:before,
+body header .site-banner .icon-byui-logo:before {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  padding: 1rem 1rem;
+}
+html header .site-banner .site-banner__left,
+body header .site-banner .site-banner__left {
   font-size: 2rem;
   background-color: #000000;
   color: #fff;
@@ -1068,7 +1080,8 @@ header {
   line-height: 60px;
   width: 80px;
 }
-.site-banner .site-banner__right {
+html header .site-banner .site-banner__right,
+body header .site-banner .site-banner__right {
   font-size: 2rem;
   margin-right: 1.5rem;
   display: flex;
@@ -1077,22 +1090,8 @@ header {
   width: 125px;
   height: 60px;
 }
-
-.icon-byui-logo:before {
-  font-size: 2rem;
-  text-align: center;
-  color: #fff;
-  padding: 1rem 1rem;
-}
-
-.mobile-header-icon {
-  color: #fff;
-  text-decoration: none;
-  justify-content: space-between;
-  line-height: 60px;
-}
-
-.site-name {
+html main .site-name,
+body main .site-name {
   background-color: #eaeaea;
   margin: 0;
   padding: 1rem;
@@ -1103,14 +1102,18 @@ header {
   font-weight: 100;
   border-bottom: 1px solid #000;
 }
-
-.image-carousel {
+html main .page-wrapper,
+body main .page-wrapper {
+  margin: 0 auto;
+}
+html main .page-wrapper .image-carousel,
+body main .page-wrapper .image-carousel {
   margin: auto;
   margin-top: 35px;
   width: 96%;
 }
-
-figure {
+html main .page-wrapper figure,
+body main .page-wrapper figure {
   margin: auto;
   margin-top: 35px;
   width: 96%;
@@ -1119,12 +1122,12 @@ figure {
   font-family: "BYUI Open Sans", "sans-serif";
   font-size: 0.95rem;
 }
-
-.home-ad-caption {
+html main .page-wrapper .home-ad-caption,
+body main .page-wrapper .home-ad-caption {
   padding: 10px;
 }
-
-.audience-button {
+html main .page-wrapper .audience-button,
+body main .page-wrapper .audience-button {
   margin: auto;
   border: 1px solid #b4b3b5;
   border-radius: 5px;
@@ -1135,8 +1138,8 @@ figure {
   margin-top: 35px;
   padding: 10px;
 }
-
-.resources-heading {
+html main .page-wrapper .aside-resources .resources-heading,
+body main .page-wrapper .aside-resources .resources-heading {
   display: block;
   margin: 0 auto;
   margin-top: 35px;
@@ -1149,8 +1152,8 @@ figure {
   font-weight: 400;
   text-align: left;
 }
-
-.h6 {
+html main .page-wrapper .h6,
+body main .page-wrapper .h6 {
   margin: 0 auto;
   padding: 10px 20px;
   border-bottom: 1px solid #b4b3b5;
@@ -1163,8 +1166,8 @@ figure {
   font-size: 0.95rem;
   font-weight: 400;
 }
-
-.important-dates-heading {
+html main .page-wrapper .aside-important-dates .important-dates-heading,
+body main .page-wrapper .aside-important-dates .important-dates-heading {
   display: block;
   margin: 0 auto;
   margin-top: 35px;
@@ -1177,45 +1180,45 @@ figure {
   font-weight: 400;
   text-align: left;
 }
-
-.aside-important-dates .h6 {
+html main .page-wrapper .aside-important-dates .aside-important-dates .h6,
+body main .page-wrapper .aside-important-dates .aside-important-dates .h6 {
   color: #000;
   border-right: 0;
   border-left: 0;
   background-color: #fff;
 }
-
-.articles-group {
+html main .page-wrapper .articles-group,
+body main .page-wrapper .articles-group {
   margin-top: 35px;
   width: 96%;
 }
-
-.article {
+html main .page-wrapper .articles-group .article,
+body main .page-wrapper .articles-group .article {
   margin: auto;
   border-top: 1px solid #727272;
   padding: 25px 0;
   width: 96%;
 }
-
-.article-date {
-  font-size: 11px;
+html main .page-wrapper .articles-group .article .article-date,
+body main .page-wrapper .articles-group .article .article-date {
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
 }
-
-.article-title {
+html main .page-wrapper .articles-group .article .article-title,
+body main .page-wrapper .articles-group .article .article-title {
   color: #056cb6;
   font-family: "BYUI Open Sans", "sans-serif";
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0;
 }
-
-.article-abstract {
+html main .page-wrapper .articles-group .article .article-abstract,
+body main .page-wrapper .articles-group .article .article-abstract {
   font-size: 1.2rem;
 }
-
-.newsroom-button {
+html main .page-wrapper .articles-group .newsroom-button,
+body main .page-wrapper .articles-group .newsroom-button {
   float: right;
   margin-right: 7px;
   margin-bottom: 35px;
@@ -1229,9 +1232,22 @@ figure {
   font-size: 0.95rem;
   border-radius: 4px;
 }
-
-.university-message-heading {
+html main .page-wrapper .university-message .university-message-heading,
+body main .page-wrapper .university-message .university-message-heading {
   background-color: #eaeaea;
+}
+html main .page-wrapper .university-message .university-message-image,
+body main .page-wrapper .university-message .university-message-image {
+  margin-top: 0;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+html footer .footer-graphic,
+body footer .footer-graphic {
+  margin: auto;
+  display: block;
+  padding: 0;
+  max-width: 25%;
 }
 
 .university-message-heading,
@@ -1250,19 +1266,6 @@ figure {
   text-align: left;
 }
 
-.university-message-image {
-  margin-top: 0;
-  border-top: none;
-  border-radius: 0 0 5px 5px;
-}
-
-.footer-graphic {
-  margin: auto;
-  display: block;
-  padding: 0;
-  max-width: 25%;
-}
-
 @media only screen and (min-width: 32em) {
   .page-wrapper {
     max-width: 960px;
@@ -1271,66 +1274,42 @@ figure {
     grid-auto-rows: minmax(20px, auto);
     column-gap: 25px;
   }
-
-  img.semester-updates {
-    width: 100%;
-  }
-
-  .banners {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .updates {
-    display: flex;
-    flex: 2 1 300px;
-    padding: 15px;
-  }
-
-  .image-carousel {
+  .page-wrapper .image-carousel {
     grid-column: 1/2;
     grid-row: 1/3;
   }
-
-  .video-gallery-campus {
+  .page-wrapper .video-gallery-campus {
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 3/5;
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-
-  figure {
+  .page-wrapper .video-gallery-campus figure {
     width: 30%;
   }
-
-  .audience-button {
+  .page-wrapper .audience-button {
     grid-column: 2/3;
     grid-row: 1/2;
     padding: 20px 10px;
   }
-
-  .aside-resources {
+  .page-wrapper .aside-resources {
     grid-column: 2/3;
     grid-row: 2/4;
   }
-
-  .aside-important-dates {
+  .page-wrapper .aside-important-dates {
     grid-column: 2/3;
-    grid-row: 4/5;
+    grid-row: 4/6;
   }
-
-  .articles-group {
+  .page-wrapper .articles-group {
     grid-column: 1/2;
-    grid-row: 4/5;
+    grid-row: 5/8;
   }
-
-  .university-message {
+  .page-wrapper .university-message {
     grid-column: 2/3;
-    grid-row: 5/6;
+    grid-row: 6/7;
   }
 
   img.footer-graphic {
